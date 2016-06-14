@@ -147,7 +147,7 @@ const questionResultView = (id, question) => {
 };
 
 const summaryView = (state) => {
-    const score = state.questions.reduce((memo, question) => { return memo += question.result; }, 0) * QUESTION_POINTS_VALUE;
+    const score = Math.round(state.questions.reduce((memo, question) => { return memo += question.result; }, 0) * QUESTION_POINTS_VALUE);
     const potentialScore = state.questions.length * QUESTION_POINTS_VALUE;
     const encodedText = encodeURIComponent(`I scored ${score}/${potentialScore}. ${state.title}`);
     const facebookURL = `http://www.facebook.com/sharer.php?u=${state.encodedURL}&t=${encodedText}`;
