@@ -3,16 +3,16 @@ const yo = require('yo-yo');
 const VERY_CLOSE_RESPONSES = [
     'Woo hoo! You get | for\xA0being\xA0so\xA0right.',
     'Yep, you got it. |!',
-    'Nice one! | for you\xA0😀'
+    'Nice one! | for you\xA0😄'
 ];
 const CLOSE_RESPONSES = [
     'So close! You get | for\xA0that\xA0one.',
-    'Not bad! 😐 | for you.',
+    'Not bad! 😉 | for you.',
     'Nearly, but not quite. |.'
 ];
 const DISTANT_RESPONSES = [
     'Nope, that\'s not it. |\xA0for\xA0you.',
-    'Sorry, nowhere near. |\xA0☹️',
+    'Sorry, nowhere near. |\xA0😞',
     'Not this time. |.'
 ];
 const QUESTION_POINTS_VALUE = 10;
