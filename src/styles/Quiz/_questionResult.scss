@@ -1,0 +1,24 @@
+.QuizQuestionResult {
+
+}
+
+.QuizQuestionResult-text {
+	padding: 1em 0 1.5em;
+	font-size: 1.25em;
+	font-weight: bold;
+	text-align: center;
+	animation: fadeAndNudgeIn 1s $basicTimingFunction 0s 1 normal backwards running;
+}
+
+.QuizQuestionResult-score--positive {
+	color: $green;
+}
+
+.QuizQuestionResult-score--negative {
+	color: $red;
+}
+
+.QuizQuestionResult-explanation {
+	line-height: 1.6875;
+	animation: fadeAndNudgeIn 1s $basicTimingFunction 0.25s 1 normal backwards running;
+}

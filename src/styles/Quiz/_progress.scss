@@ -1,0 +1,72 @@
+.QuizProgress {
+	position: relative;
+	z-index: 1;
+	height: 2.5em;
+	background-color: $lighterGrey;
+	color: $darkGrey;
+	line-height: 2.5em;
+	text-transform: uppercase;
+	pointer-events: none;
+}
+
+.story.richtext .QuizProgress {
+	margin-left: -10px;
+	margin-right: -10px;
+}
+
+@supports (position: sticky) or (position: -webkit-sticky) {
+	.QuizProgress {
+		position: -webkit-sticky;
+		position: sticky;
+		bottom: 0;
+	}
+}
+
+.QuizProgress > * {
+	position: absolute;
+	top: 0;
+}
+
+.QuizProgress-score {
+	left: 0.625em;
+}
+
+.article.section .QuizProgress-score {
+	left: 12.5em;
+}
+
+.QuizProgress-remaining {
+	right: 0.625em;
+}
+
+.article.section .QuizProgress-remaining {
+	right: 12.5em;
+}
+
+.QuizProgress > * > * {
+	vertical-align: middle;
+}
+
+.QuizProgress-label {
+	font-family: $fontFamilyBasic;
+	font-size: 0.75em;
+}
+
+.QuizProgress-scoreValue {
+	display: inline-block;
+	width: 4em;
+	color: $darkBlue;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: right;
+}
+
+.story.richtext .QuizProgress-scoreValue {
+	width: 3.75em;
+	height: 1.75em;
+	letter-spacing: -0.05em;
+}
+
+.QuizProgress-scoreValueSplit {
+	padding: 0 0.125em;
+}

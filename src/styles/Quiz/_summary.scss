@@ -1,0 +1,56 @@
+.QuizSummary {
+	text-align: center;
+	animation: fadeAndNudgeIn 1s $basicTimingFunction 0s 1 normal backwards running;
+}
+
+.QuizSummary-scoreLabel,
+.QuizSummary-scorePotential {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.QuizSummary-scoreLabel {
+	font-size: 1.5em;
+}
+
+.QuizSummary-scoreValue {
+	margin: 0.1em 0;
+	font-size: 9.375em;
+	line-height: 0.9;
+	color: $darkBlue;
+}
+
+.story.richtext .QuizSummary-scoreValue {
+	margin: 0 0 0.1em 0;
+}
+
+.QuizSummary-scorePotential {
+	margin: -0.5em 0 1.5em;
+	font-size: 1.25em;
+}
+
+.QuizSummary-share {
+	display: inline-block;
+	width: 3em;
+	height: 3em;
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+
+.QuizSummary-share--facebook {
+	margin-right: 0.5em;
+	background-size: 1.1875em 2.1875em;
+	background-image: url("../assets/facebook.svg");
+}
+
+.QuizSummary-share--twitter {
+	background-size: 2.4375em 2em;
+	background-image: url("../assets/twitter.svg");
+}
+
+.QuizSummary-shareLabel {
+	color: $grey;
+	font-size: 0.75em;
+	text-transform: uppercase;
+}

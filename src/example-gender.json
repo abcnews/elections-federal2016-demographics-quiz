@@ -1,0 +1,122 @@
+{
+	"group": "Gender",
+	"identityMappings": {
+		"Woman": ["men"],
+		"Man": ["women"],
+		"Other": ["men", "women"]
+	},
+	"ranges": [
+		["Strongly disagree", "Somewhat disagree", "Neutral", "Somewhat agree", "Strongly agree"],
+		["Much less", "Somewhat less", "About the same as now", "Somewhat more", "Much more"],
+		["Many fewer", "Somewhat fewer", "About the same as now", "Somewhat more", "Many more"],
+		["Much lower", "Somewhat lower", "About the same as now", "Somewhat higher", "Much higher"]
+	],
+	"questions": [
+		{
+			"text": "On average, where do {d} stand on this issue?",
+			"statement": "Marriage should only be between a man and a woman.",
+			"range": 0,
+			"answers": {
+				"men": 2.898967,
+				"women": 2.233262
+			},
+			"explanation": "While both genders on average disagree with the current legal definition of marriage, women are more likely to have strong feelings on the issue."
+		},
+		{
+			"text": "On average, where do {d} stand on this issue?",
+			"statement": "The federal budget deficit should be reduced, even if it means fewer public services.",
+			"range": 0,
+			"answers": {
+				"men": 3.190986,
+				"women": 2.682634
+			},
+			"explanation": "This is one of only seven Vote Compass questions in which men and women have, on average, opposing views. Women are generally opposed to cutting public servies in order to get the budget more balanced. "
+		},
+		{
+			"text": "On average, where do {d} stand on this issue?",
+			"statement": "Australia should put a price on carbon emissions.",
+			"range": 0,
+			"answers": {
+				"men": 3.414177,
+				"women": 3.865463
+			},
+			"explanation": "A clear majority of men and women agree that Australia should put a price on carbon, with women more likely to have a strong opinion on the issue. Data from Vote Compass shows 63 per cent of Australians support a price on carbon emissions, up from 50 per cent during the \"axe the tax\" 2013 election.",
+			"relatedStoryId": 7467242
+		},
+		{
+			"text": "On average, where do {d} stand on this issue?",
+			"statement": "How many refugees should Australia admit?",
+			"range": 2,
+			"answers": {
+				"men": 3.203365,
+				"women": 3.627971
+			},
+			"explanation": "Both men and women, on average, say that Australia should admit more refugees than it currently does."
+		},
+		{
+			"text": "On average, where do {d} stand on this issue?",
+			"statement": "The government should establish a federal corruption watchdog.",
+			"range": 0,
+			"answers": {
+				"men": 4.244156,
+				"women": 4.208348
+			},
+			"explanation": "This is the topic on which men and women are in furious agreement, as are the main political parties. Unfortunately, the parties are both opposed, whereas most Australians (more than 80pc) are in favour of a federal ICAC. ABC News breaks down the numbers from Vote Compass.",
+			"relatedStoryId": 7474810
+		},
+		{
+			"text": "On average, where do {d} stand on this issue?",
+			"statement": "Gender quotas should be used to increase the number of women in Parliament.",
+			"range": 0,
+			"answers": {
+				"men": 2.384805,
+				"women": 3.280745
+			},
+			"explanation": "Biggest gender gap: Not only did this question show women agreeing and men disagreeing, but the overall gap was the biggest of any of the Vote Compass questions. It's also one of only eight questions where men had a stronger opinion than women. "
+		},
+		{
+			"text": "On average, where do {d} stand on this issue?",
+			"statement": "The government should further restrict foreign ownership of Australian agricultural land.",
+			"range": 0,
+			"answers": {
+				"men": 4.030645,
+				"women": 4.310707
+			},
+			"explanation": "This is one of only two questions where both genders had strong opinions. Overall, women were more enthusiastic towards more restrictions on foreign ownership of agricultural land, but men were not far behind. See more on this:",
+			"relatedStoryId": 7432598
+		},
+		{
+			"text": "On average, where do {d} stand on this issue?",
+			"statement": "Boats carrying asylum seekers should be turned back.",
+			"range": 0,
+			"answers": {
+				"men": 3.493181,
+				"women": 2.754599
+			},
+			"explanation": "The second biggest gender gap, and one of only seven questions that men and women are divided on. Men are generally in favour of boat turn-backs and offshore detention. See more on Vote Compass and asylum seeker issues:",
+			"relatedStoryId": 7493064
+		},
+		{
+			"text": "On average, where do {d} stand on this issue?",
+			"statement": "Transgender awareness should be taught in primary schools.",
+			"range": 0,
+			"answers": {
+				"men": 2.453281,
+				"women": 3.052153
+			},
+			"explanation": "This is one of only eight questions where men have a more strident view than women. Women are on average slightly inclined to agree, whereas men are more likely to be against the idea. Overall, more Australians were opposed to transgender awareness being taught in primary schools than were supportive.",
+			"relatedStoryId": 7459978
+		},
+		{
+			"text": "On average, where do {d} stand on this issue?",
+			"statement": "How high should the minimum wage be?",
+			"range": 3,
+			"answers": {
+				"men": 3.443847,
+				"women": 3.732927
+			},
+			"explanation": "There are 19 vote Compass questions in which the average women's answer is further away from \"neutral\" than men's, and this is one of them. Nearly two-thirds of women surveyed in Vote Compass want the minimum wage to be higher, but less than half of men share their view.",
+			"relatedStoryId": 7445700
+		}
+	]
+}

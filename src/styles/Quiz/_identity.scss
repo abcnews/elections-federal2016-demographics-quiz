@@ -1,0 +1,28 @@
+.QuizIdentity {
+	text-align: center;
+	transition: opacity 0.125s $basicTimingFunction 0.625s;
+	will-change: opacity;
+}
+
+.QuizIdentity.has-chosen {
+	opacity: 0;
+}
+
+.QuizIdentity-text {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.QuizIdentity-choices {
+	margin: 0.75em 0 0;
+}
+
+.QuizIdentity-choices .Button:not([disabled]):hover,
+.QuizIdentity-choices .Button:not([disabled]):active,
+.QuizIdentity.has-chosen .QuizIdentity-choices .Button:not([disabled]) {
+	background-color: $lightGrey;
+}
+
+.QuizIdentity-choices .Button + .Button {
+	margin: 0 0 0 0.66em;
+}

@@ -1,0 +1,65 @@
+.QuizQuestion {
+	position: relative;
+	margin-bottom: 1.5em;
+	padding-bottom: 1.5em;
+	animation: fadeAndNudgeIn 1s $basicTimingFunction 0s 1 normal backwards running;
+}
+
+.QuizQuestion + .QuizQuestion { animation-delay: 0.125s; }
+.QuizQuestion + .QuizQuestion + .QuizQuestion { animation-delay: 0.25s; }
+.QuizQuestion + .QuizQuestion + .QuizQuestion + .QuizQuestion { animation-delay: 0.375s; }
+.QuizQuestion + .QuizQuestion + .QuizQuestion + .QuizQuestion + .QuizQuestion { animation-delay: 0.5s; }
+
+.article.section .QuizQuestion {
+	margin-bottom: 3em;
+	padding-bottom: 3em;
+}
+
+.QuizQuestion::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	right: 0.75em;
+	left: 0.75em;
+	box-sizing: border-box;
+	border-top: 1px dashed #ccc;
+}
+
+.QuizQuestion-title {
+	padding: 0 0.75em;
+	color: $darkBlue;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.QuizQuestion-text {
+	margin: 0.125em 0 0;
+	padding: 0 0.625em;
+	font-size: 1.125em;
+}
+
+.QuizQuestion-statement {
+	position: relative;
+	margin: 0.375em 0 0;
+	padding: 0.625em 0.625em 0;
+	color: $blue;
+	font-size: 1.125em;
+	text-align: left;
+}
+
+.QuizQuestion-statement::before {
+	content: "";
+	position: absolute;
+	width: 1.75em;
+	height: 1.5625em;
+	bottom: -0.0625em;
+	right: 0.625em;
+	transform: rotate(180deg);
+}
+
+.QuizQuestion-statement,
+.QuizQuestion-statement::before {
+	background-image: url("../assets/quote.svg");
+	background-size: 1.75em 1.5625em;
+	background-repeat: no-repeat; 
+}

@@ -1,0 +1,22 @@
+.Button {
+	padding: 0;
+	width: 6.2em;
+	height: 2.8em;
+	line-height: 2.8;
+	outline: none;
+	border: none;
+	border-radius: 0.333em;
+	background-color: $lighterGrey;
+	color: $black;
+	font-size: 0.9375em;
+	font-family: $fontFamilyBasic;
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+	transition: opacity 0.25s $basicTimingFunction;
+	will-change: opacity;
+}
+
+.Button[disabled] {
+	opacity: 0.2;
+	cursor: default;
+}

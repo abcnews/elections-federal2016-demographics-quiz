@@ -1,0 +1,223 @@
+.QuizQuestionInput {
+	position: relative;
+	z-index: 1;
+	margin: 2em 1.5em 0;
+	padding-bottom: 2.4em;
+	font-family: $fontFamilyBasic;
+}
+
+.QuizQuestion.is-revealed .QuizQuestionInput {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.QuizQuestionInput-grid {
+	position: relative;
+}
+
+.QuizQuestionInput-gridLine {
+	position: absolute;
+	left: 0;
+	transform: translate(-0.0625em, 0);
+	height: 100%;
+	width: 2px;
+	background-color: $lightGrey;
+}
+
+.QuizQuestionInput-gridLine:nth-child(2) {
+	left: 25%;
+}
+
+.QuizQuestionInput-gridLine:nth-child(3) {
+	left: 50%;
+}
+
+.QuizQuestionInput-gridLine:nth-child(4) {
+	left: 75%;
+}
+
+.QuizQuestionInput-gridLine:nth-child(5) {
+	left: 100%;
+}
+
+.QuizQuestionInput-marker {
+	position: relative;
+	z-index: 1;
+	height: 2.25em;
+}
+
+.QuizQuestionInput-marker.is-guess {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 2;
+}
+
+.QuizQuestion.is-submitted .QuizQuestionInput-marker.is-demographic {
+	z-index: 3;
+	transition: margin-left 0.25s $basicTimingFunction;
+}
+
+.QuizQuestionInput-markerLabel {
+	position: absolute;
+	transform: translate(-50%, 0);
+	border-radius: 0.181818182em;
+	padding: 0 0.5em;
+	// box-shadow: 0px -0.5px 0px 0px $white;
+	box-shadow: 0px -1px 0px 0px rgba(255,255,255,0.5);
+	background-color: $grey;
+	color: $white;
+	font-size: 0.6875em;
+	font-weight: bold;
+	line-height: 1.818181818em;
+	text-transform: uppercase;
+	white-space: nowrap;
+	transition: color 0.125s;
+}
+
+.QuizQuestionInput-marker.is-guess .QuizQuestionInput-markerLabel {
+	background-color: $lightGrey;
+}
+
+.QuizQuestionInput-marker.is-demographic .QuizQuestionInput-markerLabel {
+	background-color: $blue;
+}
+
+.QuizQuestionInput-marker.is-correct .QuizQuestionInput-markerLabel {
+	background-color: $green;
+}
+
+.QuizQuestionInput-marker.is-incorrect .QuizQuestionInput-markerLabel {
+	background-color: $red;
+}
+
+.QuizQuestionInput-markerLabel::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 50%;
+	z-index: -1;
+	transform: translate(-0.090909091em, 0);
+	height: 3.272727273em;
+	width: 2px;
+	background-color: inherit;
+}
+
+.QuizQuestion:not(.is-revealed) .QuizQuestionInput-marker:nth-last-child(2) .QuizQuestionInput-markerLabel::before,
+.QuizQuestion.is-revealed .QuizQuestionInput-marker:nth-last-child(3) .QuizQuestionInput-markerLabel::before {
+	height: 6.545454546em;
+}
+
+.QuizQuestion:not(.is-revealed) .QuizQuestionInput-marker:nth-last-child(3) .QuizQuestionInput-markerLabel::before,
+.QuizQuestion.is-revealed .QuizQuestionInput-marker:nth-last-child(4) .QuizQuestionInput-markerLabel::before {
+	height: 9.818181819em;
+}
+
+.QuizQuestion:not(.is-revealed) .QuizQuestionInput-marker:nth-last-child(4) .QuizQuestionInput-markerLabel::before,
+.QuizQuestion.is-revealed .QuizQuestionInput-marker:nth-last-child(5) .QuizQuestionInput-markerLabel::before {
+	height: 13.090909092em;
+}
+
+.QuizQuestionInput-markerLabel::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translate(-50%, 45%) rotate(45deg);
+	height: 8px;
+	width: 8px;
+	background-color: inherit;
+}
+
+.QuizQuestionInput-axis {
+	position: relative;
+	height: 2.5em;
+	color: $darkGrey;
+}
+
+.QuizQuestionInput-axis::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: -1.5em;
+	right: -1.5em;
+	height: 2px;
+	background-color: $lightGrey;
+}
+
+.QuizQuestionInput-tick {
+	position: absolute;
+	left: 0;
+}
+
+.QuizQuestionInput-tick:nth-child(2) {
+	left: 25%;
+}
+
+.QuizQuestionInput-tick:nth-child(3) {
+	left: 50%;
+	width: 5em;
+}
+
+.QuizQuestionInput-tick:nth-child(4) {
+	left: 75%;
+}
+
+.QuizQuestionInput-tick:nth-child(5) {
+	left: 100%;
+}
+
+.QuizQuestionInput-tickLabel {
+	position: absolute;
+	top: 0.275em;
+	transform: translate(-50%, 0);
+	font-size: 0.6875em;
+	font-weight: bold;
+	line-height: 1.272727273;
+	text-align: center;
+}
+
+.story.richtext .QuizQuestionInput-tick:nth-child(2) .QuizQuestionInput-tickLabel,
+.story.richtext .QuizQuestionInput-tick:nth-child(4) .QuizQuestionInput-tickLabel {
+	opacity: 0;
+}
+
+.QuizQuestionInput-handle {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transform: translate(-50%, 0);
+	width: 2.125em;
+	height: 2.4em;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-image: url("../assets/handle.svg");
+	cursor: pointer;
+	transition: opacity 0.25s $basicTimingFunction;
+	will-change: opacity;
+}
+
+.QuizQuestion.is-submitted .QuizQuestionInput-handle {
+	opacity: 0;
+}
+
+.QuizQuestionInput-handleHint {
+	opacity: 1;
+	position: absolute;
+	top: 50%;
+	left: 35%;
+	width: 1.9375em;
+	height: 3.0625em;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-image: url("../assets/hint.svg");
+	pointer-events: none;
+}
+
+.QuizQuestion.has-guess .QuizQuestionInput-handleHint {
+	opacity: 0;
+}
+
+.QuizQuestion.is-revealed .QuizQuestionInput-handle {
+	display: none;
+}
