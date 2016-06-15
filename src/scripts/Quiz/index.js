@@ -104,6 +104,10 @@ const guessHandler = (el, send) => {
 
         while (target !== el && target.className !== 'QuizQuestionInput') {
             target = target.parentElement;
+
+            if (target === null) {
+                return;
+            }
         }
 
         if (target === el) {
@@ -124,7 +128,7 @@ const guessHandler = (el, send) => {
         e.stopPropagation();
 
         send('guess', {id: id, guess: guess});
-    }, 50);
+    }, 10);
 
     el.addEventListener('mousedown', onMouseStart, false);
     document.addEventListener('mousemove', conditionalPointerHandler, false);
