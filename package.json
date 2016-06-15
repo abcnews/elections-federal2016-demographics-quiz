@@ -1,6 +1,6 @@
 {
   "name": "elections-federal2016-demographics-quiz",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Quizzing the audience on where demographics are positioned in Vote Compass results.",
   "private": true,
   "repository": "ssh://git@stash.abc-dev.net.au:7999/news/elections-federal2016-polls.git",
