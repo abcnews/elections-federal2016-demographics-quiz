@@ -68,14 +68,13 @@
 	position: absolute;
 	transform: translate(-50%, 0);
 	border-radius: 0.181818182em;
-	padding: 0 0.5em;
-	// box-shadow: 0px -0.5px 0px 0px $white;
+	padding: 0.409090909em 0.5em;
 	box-shadow: 0px -1px 0px 0px rgba(255,255,255,0.5);
 	background-color: $grey;
 	color: $white;
 	font-size: 0.6875em;
 	font-weight: bold;
-	line-height: 1.818181818;
+	line-height: 1;
 	text-transform: uppercase;
 	white-space: nowrap;
 	transition: color 0.125s;

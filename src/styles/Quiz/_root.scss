@@ -19,6 +19,12 @@
 	padding: 0 10px;
 }
 
+@media (min-width: 641px) {
+	.story.richtext .Quiz {
+		font-size: 32px;
+	}
+}
+
 .article.section .Quiz {
 	padding: 0 160px 0 0;
 	width: 540px;
