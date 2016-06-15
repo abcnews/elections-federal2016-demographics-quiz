@@ -1,6 +1,5 @@
 const raf = require('raf');
 const sendAction = require('send-action');
-const throttle = require('throttleit');
 const yo = require('yo-yo');
 const view = require('./view');
 
@@ -82,24 +81,16 @@ const quiz = (config) => {
 };
 
 const guessHandler = (el, send) => {
-    let isMouseDown = false;
+    let isPointerDown = false;
+    let message;
 
-    const onMouseStart = (e) => {
-        isMouseDown = true;
+    const onStart = (e) => {
+        isPointerDown = true;
+
         pointerHandler(e);
     };
 
-    const onMouseEnd = () => {
-        isMouseDown = false;
-    };
-
-    const conditionalPointerHandler = (e) => {
-        if (isMouseDown) {
-            pointerHandler(e);
-        }
-    };
-
-    const pointerHandler = throttle((e) => {
+    const pointerHandler = (e) => {
         let target = e.target;
 
         while (target !== el && target.className !== 'QuizQuestionInput') {
@@ -124,18 +115,47 @@ const guessHandler = (el, send) => {
         const point = e.touches == null ? e : e.touches[0];
         const guess = Math.max(0, Math.min(1, (point.clientX - rect.left) / rect.width));
 
+        message = {id: id, guess: guess};
+
         e.preventDefault();
         e.stopPropagation();
 
-        send('guess', {id: id, guess: guess});
-    }, 100);
+        // Temporary UI update that doesn't wait for expensive state-based view
 
-    el.addEventListener('mousedown', onMouseStart, false);
-    document.addEventListener('mousemove', conditionalPointerHandler, false);
-    el.addEventListener('mouseup', onMouseEnd, false);
-    document.addEventListener('mouseleave', onMouseEnd, false);
-    el.addEventListener('touchstart', pointerHandler, false);
-    document.addEventListener('touchmove', pointerHandler, false);  
+        $(target)
+        .find('.QuizQuestionInput-handle')
+            .css('transform', 'translate(' + (guess * 100) + '%, 0)')
+            .end()
+        .find('.QuizQuestionInput-marker.is-demographic')
+            .css('transform', 'translate(' + (guess * 100) + '%, 0)');
+    };
+
+    const conditionalPointerHandler = (e) => {
+        if (isPointerDown) {
+            pointerHandler(e);
+        }
+    };
+
+    const onEnd = () => {
+        isPointerDown = false;
+
+        if (message) {
+            send('guess', message);
+
+            message = null;
+        }
+    };
+
+    el.addEventListener('mousedown', onStart, false);
+    el.addEventListener('touchstart', onStart, false);
+
+    el.addEventListener('mousemove', conditionalPointerHandler, false);
+    document.addEventListener('touchmove', pointerHandler, false);
+
+    el.addEventListener('mouseup', onEnd, false);
+    el.addEventListener('touchend', onEnd, false);
+    // el.addEventListener('mouseleave', onEnd, false);
+    document.addEventListener('touchcancel', onEnd, false);
 };
 
 const questionsForIdentity = (config, identity) => {

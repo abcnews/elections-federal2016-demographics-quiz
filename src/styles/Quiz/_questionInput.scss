@@ -57,7 +57,6 @@
 
 .QuizQuestionInput-marker.is-demographic {
 	z-index: 3;
-	transition: transform 0.05s linear;
 	will-change: transform;
 }
 
@@ -76,7 +75,7 @@
 	color: $white;
 	font-size: 0.6875em;
 	font-weight: bold;
-	line-height: 1.818181818em;
+	line-height: 1.818181818;
 	text-transform: uppercase;
 	white-space: nowrap;
 	transition: color 0.125s;
@@ -199,7 +198,7 @@
 	background-size: 2.125em, 2.4em;
 	background-image: url("../assets/handle.svg");
 	cursor: pointer;
-	transition: transform 0.05s linear, opacity 0.25s $basicTimingFunction;
+	transition: opacity 0.25s $basicTimingFunction;
 	will-change: transform, opacity;
 }
 
