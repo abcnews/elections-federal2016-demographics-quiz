@@ -128,7 +128,7 @@ const guessHandler = (el, send) => {
         e.stopPropagation();
 
         send('guess', {id: id, guess: guess});
-    }, 10);
+    }, 100);
 
     el.addEventListener('mousedown', onMouseStart, false);
     document.addEventListener('mousemove', conditionalPointerHandler, false);
