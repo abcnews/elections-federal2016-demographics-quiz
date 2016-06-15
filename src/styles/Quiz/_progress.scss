@@ -9,8 +9,8 @@
 .story.richtext .QuizProgress {
 	position: fixed;
 	bottom: 0;
-	margin-left: -10px;
-	margin-right: -10px;
+	left: 50%;
+	transform: translate(-50%, 0);
 	width: 100%;
 	height: 2.5em;
 	line-height: 2.5em;
