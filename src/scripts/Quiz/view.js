@@ -146,6 +146,8 @@ const questionResultView = (id, question) => {
     </div>`;
 };
 
+
+
 const summaryView = (state) => {
     const score = Math.round(state.questions.reduce((memo, question) => { return memo += question.result; }, 0) * QUESTION_POINTS_VALUE);
     const potentialScore = state.questions.length * QUESTION_POINTS_VALUE;
@@ -164,11 +166,9 @@ const summaryView = (state) => {
 };
 
 const progressView = (state) => {
-    const answered = state.questions.filter((question) => question.result !== null);
-    const correct = answered.filter((question) => question.result === true);
-    const score = correct.length * QUESTION_POINTS_VALUE;
+    const score = Math.round(state.questions.reduce((memo, question) => { return memo += question.result; }, 0) * QUESTION_POINTS_VALUE);
     const potentialScore = state.questions.length * QUESTION_POINTS_VALUE;
-    const numRemaining = state.questions.length - answered.length;
+    const numRemaining = state.questions.filter((question) => question.result == null).length;
 
     return yo`<div class="QuizProgress">
         <div class="QuizProgress-score"><span class="QuizProgress-label">Score</span><span class="QuizProgress-scoreValue">${score}<span class="QuizProgress-scoreValueSplit">/</span>${potentialScore}</span></div>
