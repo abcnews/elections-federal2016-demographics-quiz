@@ -6,7 +6,8 @@
 }
 
 .article.section .QuizIdentity {
-	margin: 10em 0 10em 80px; 
+	margin: 10em 0; 
+	transform: translate(80px, 0);
 }
 
 .QuizIdentity.has-chosen {
