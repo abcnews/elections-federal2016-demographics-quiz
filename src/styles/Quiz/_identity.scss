@@ -1,7 +1,12 @@
 .QuizIdentity {
+	margin: 5em 0;
 	text-align: center;
 	transition: opacity 0.125s $basicTimingFunction 0.625s;
 	will-change: opacity;
+}
+
+.article.section .QuizIdentity {
+	margin: 10em 0 10em 80px; 
 }
 
 .QuizIdentity.has-chosen {
