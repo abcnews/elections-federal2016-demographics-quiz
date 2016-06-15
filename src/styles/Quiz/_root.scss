@@ -1,6 +1,6 @@
 .Quiz {
+	overflow: hidden;
 	position: relative;
-	margin: 40px auto;
 	min-height: 20em;
 	font-size: 16px;
 	font-size: 5vw;
@@ -14,14 +14,13 @@
 	user-select: none;
 }
 
-.article.section .Quiz {
-	width: 940px;
-	max-width: 100%;
-	font-size: 18px;
+.story.richtext .Quiz {
+	margin: 0 -10px;
+	padding: 0 10px;
 }
 
-.article.section .Quiz-questions {
-	margin: 0 auto;
-	width: 540px;
-	max-width: 100%;
+.article.section .Quiz {
+	padding: 0 160px 0 0;
+	width: 520px;
+	font-size: 18px;
 }

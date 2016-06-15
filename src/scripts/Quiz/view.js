@@ -1,19 +1,19 @@
 const yo = require('yo-yo');
 
 const VERY_CLOSE_RESPONSES = [
-    'Woo hoo! You get | for\xA0being\xA0so\xA0right.',
-    'Yep, you got it. |!',
+    'Woo hoo! 🌟 You get | for\xA0being\xA0so\xA0right.',
+    'Yep, you got it. |!\xA0👌',
     'Nice one! | for you\xA0😄'
 ];
 const CLOSE_RESPONSES = [
-    'So close! You get | for\xA0that\xA0one.',
+    'So close! 😁 You get | for\xA0that\xA0one.',
     'Not bad! 😉 | for you.',
-    'Nearly, but not quite. |.'
+    'Nearly, but not quite. |\xA0😐'
 ];
 const DISTANT_RESPONSES = [
-    'Nope, that\'s not it. |\xA0for\xA0you.',
-    'Sorry, nowhere near. |\xA0😞',
-    'Not this time. |.'
+    'Nope, that\'s not it. 😧 |\xA0for\xA0you.',
+    'Sorry, nowhere near. |\xA0😡',
+    'Not this time. |\xA0😞'
 ];
 const QUESTION_POINTS_VALUE = 10;
 const VERY_CLOSE_MARGIN = 0.75;
@@ -90,7 +90,7 @@ const questionInputView = (id, question) => {
         return yo`<div
             id="QuizQuestionInput-marker--${key}"
             class="${className}"
-            style="margin-left: ${pct}%">
+            style="transform: translate(${pct}%, 0)">
             <div class="QuizQuestionInput-markerLabel">${key}</div>
         </div>`;
     }));
@@ -100,7 +100,7 @@ const questionInputView = (id, question) => {
             yo`<div
                 id="QuizQuestionInput-marker--is-guess"
                 class="QuizQuestionInput-marker is-guess"
-                style="margin-left: ${guessPct}%">
+                style="transform: translate(${guessPct}%, 0)">
                 <div class="QuizQuestionInput-markerLabel">${question.demographic}</div>
             </div>`
         ]);
@@ -115,7 +115,7 @@ const questionInputView = (id, question) => {
                     <div class="QuizQuestionInput-tickLabel">${tick}</div>
                 </div>`; })}
             </div>
-            <div class="QuizQuestionInput-handle" style="left: ${guessPct}%">
+            <div class="QuizQuestionInput-handle" style="transform: translate(${guessPct}%, 0)">
                 ${id > 0 ? '' : yo`<div class="QuizQuestionInput-handleHint"></div>`}
             </div>
     </div>`;

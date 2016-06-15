@@ -43,7 +43,12 @@
 .QuizQuestionInput-marker {
 	position: relative;
 	z-index: 1;
+	width: 100%; // So that %-based transforms work;
 	height: 2.25em;
+}
+
+.QuizQuestionInput-marker.is-demographic {
+	will-change: transform;
 }
 
 .QuizQuestionInput-marker.is-guess {
@@ -55,7 +60,7 @@
 
 .QuizQuestion.is-submitted .QuizQuestionInput-marker.is-demographic {
 	z-index: 3;
-	transition: margin-left 0.25s $basicTimingFunction;
+	transition: transform 0.25s $basicTimingFunction;
 }
 
 .QuizQuestionInput-markerLabel {
@@ -169,7 +174,7 @@
 
 .QuizQuestionInput-tickLabel {
 	position: absolute;
-	top: 0.275em;
+	top: 0.5em;
 	transform: translate(-50%, 0);
 	font-size: 0.6875em;
 	font-weight: bold;
@@ -185,16 +190,15 @@
 .QuizQuestionInput-handle {
 	position: absolute;
 	bottom: 0;
-	left: 0;
-	transform: translate(-50%, 0);
-	width: 2.125em;
+	left: -1.0625em;
+	width: 100%; // So that %-based transforms work;
 	height: 2.4em;
 	background-repeat: no-repeat;
-	background-size: 100%;
+	background-size: 2.125em, 2.4em;
 	background-image: url("../assets/handle.svg");
 	cursor: pointer;
 	transition: opacity 0.25s $basicTimingFunction;
-	will-change: opacity;
+	will-change: transform, opacity;
 }
 
 .QuizQuestion.is-submitted .QuizQuestionInput-handle {
@@ -204,8 +208,8 @@
 .QuizQuestionInput-handleHint {
 	opacity: 1;
 	position: absolute;
-	top: 50%;
-	left: 35%;
+	top: 1.25em;
+	left: 0.75em;
 	width: 1.9375em;
 	height: 3.0625em;
 	background-repeat: no-repeat;

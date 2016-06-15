@@ -1,4 +1,6 @@
+const raf = require('raf');
 const sendAction = require('send-action');
+const throttle = require('throttleit');
 const yo = require('yo-yo');
 const view = require('./view');
 
@@ -58,7 +60,9 @@ const quiz = (config) => {
             return state;
         },
         onchange: (params, state) => {
-            yo.update(el, view(state, send));
+            raf(() => {
+                yo.update(el, view(state, send));
+            });
         },
         state: {
             config: config,
@@ -95,7 +99,7 @@ const guessHandler = (el, send) => {
         }
     };
 
-    const pointerHandler = (e) => {
+    const pointerHandler = throttle((e) => {
         let target = e.target;
 
         while (target !== el && target.className !== 'QuizQuestionInput') {
@@ -120,14 +124,14 @@ const guessHandler = (el, send) => {
         e.stopPropagation();
 
         send('guess', {id: id, guess: guess});
-    };
+    }, 50);
 
     el.addEventListener('mousedown', onMouseStart, false);
-    el.addEventListener('mousemove', conditionalPointerHandler, false);
+    document.addEventListener('mousemove', conditionalPointerHandler, false);
     el.addEventListener('mouseup', onMouseEnd, false);
-    el.addEventListener('mouseleave', onMouseEnd, false);
+    document.addEventListener('mouseleave', onMouseEnd, false);
     el.addEventListener('touchstart', pointerHandler, false);
-    el.addEventListener('touchmove', pointerHandler, false);  
+    document.addEventListener('touchmove', pointerHandler, false);  
 };
 
 const questionsForIdentity = (config, identity) => {
