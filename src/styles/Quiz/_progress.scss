@@ -33,6 +33,11 @@
 	transform: translate(90px, 0);
 }
 
+.article.section.Narrative-article .is-above-top > .Quiz .QuizProgress {
+	top: 50px;
+	transform: translate(320px, 0);
+}
+
 @media (max-width: 999px) {
 	.article.section .is-above-top > .Quiz .QuizProgress {
 		display: none;
