@@ -3,9 +3,11 @@ const sendAction = require('send-action');
 const yo = require('yo-yo');
 const view = require('./view');
 
-const CORRECT_MARGIN = 0.125;
+const DEFAULT_CORRECT_MARGIN = 0.15;
 
 const quiz = (config) => {
+    const correctMargin = config.correctMargin || DEFAULT_CORRECT_MARGIN;
+    
     const send = sendAction({
         onaction: (params, state) => {
             let question;
@@ -43,7 +45,7 @@ const quiz = (config) => {
                     break;
                 case 'reveal':
                     const diff = Math.abs(question.guess - question.answers[question.demographic]);
-                    question.result = Math.max(0, Math.round(10 * (CORRECT_MARGIN - diff) / CORRECT_MARGIN) / 10);
+                    question.result = Math.max(0, Math.round(10 * (correctMargin - diff) / correctMargin) / 10);
 
                     if (state.questions.every(isResultGiven)) {
                         setTimeout(send.event('complete'), 1000);
