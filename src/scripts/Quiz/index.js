@@ -82,7 +82,9 @@ const quiz = (config) => {
 
 const guessHandler = (el, send) => {
     let isPointerDown = false;
-    let message;
+    let startPosition = null;
+    let determinedAxis = null;
+    let message = null;
 
     const onStart = (e) => {
         isPointerDown = true;
@@ -92,6 +94,12 @@ const guessHandler = (el, send) => {
 
     const pointerHandler = (e) => {
         let target = e.target;
+        const point = e.touches == null ? e : e.touches[0];
+        const position = {x: point.clientX, y: point.clientY};
+
+        if (startPosition === null) {
+            startPosition = position;
+        }
 
         while (target !== el && target.className !== 'QuizQuestionInput') {
             target = target.parentElement;
@@ -111,11 +119,30 @@ const guessHandler = (el, send) => {
             return;
         }
 
+        const diff = {
+            x: Math.abs(startPosition.x - position.x),
+            y: Math.abs(startPosition.y - position.y)
+        };
+
+        if (determinedAxis === null) {
+            if ((diff.x > 3 || diff.y > 3)) {
+                determinedAxis = diff.x > diff.y ? 'horizontal' : 'vertical';
+            }
+        }
+
+        if (determinedAxis === null && (diff.x > 0 || diff.y > 0)) {
+            message = null;
+            return;
+        } 
+
         const rect = target.getBoundingClientRect();
-        const point = e.touches == null ? e : e.touches[0];
         const guess = Math.max(0, Math.min(1, (point.clientX - rect.left) / rect.width));
 
         message = {id: id, guess: guess};
+
+        if (determinedAxis !== 'horizontal') {
+            return;
+        }
 
         e.preventDefault();
         e.stopPropagation();
@@ -137,13 +164,14 @@ const guessHandler = (el, send) => {
     };
 
     const onEnd = () => {
-        isPointerDown = false;
-
-        if (message) {
+        if (determinedAxis !== 'vertical' && message !== null) {
             send('guess', message);
-
-            message = null;
         }
+
+        message = null;
+        isPointerDown = false;
+        startPosition = null;
+        determinedAxis = null;
     };
 
     el.addEventListener('mousedown', onStart, false);

@@ -11,7 +11,8 @@ const CLOSE_RESPONSES = [
     'Nearly, but not quite. |\xA0😐'
 ];
 const DISTANT_RESPONSES = [
-    'Nope, that\'s not it. 😧 |\xA0for\xA0you.',
+    // 'Nope, that\'s not it. 😧 |\xA0for\xA0you.',
+    'Nope, that\'s not it. 😞 |\xA0for\xA0you.',
     'Sorry, nowhere near. |\xA0😡',
     'Not this time. |\xA0😞'
 ];
@@ -141,7 +142,7 @@ const questionResultView = (id, question) => {
         </div>
         <div class="QuizQuestionResult-explanation">
             ${question.explanation} 
-            ${question.relatedStoryId == null ? '' : yo`<a href="/news/${question.relatedStoryId}/" target="_blank" rel="noopener" >Story\xA0»</a>`}
+            ${question.relatedStoryId == null ? '' : yo`<a href="/news/${question.relatedStoryId}/" target="_blank" rel="noopener" >Find\xA0out\xA0more\xA0»</a>`}
         </div>
     </div>`;
 };
