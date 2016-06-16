@@ -8,6 +8,7 @@
 const fastclick = require('fastclick');
 const throttle = require('throttleit');
 const quiz = require('./Quiz');
+const ticker = require('./Ticker');
 
 const DATA_ATTRIBUTE = 'elections-federal2016-demographics-quiz';
 const DATA_ATTRIBUTE_SELECTOR = '[data-' + DATA_ATTRIBUTE + ']';
@@ -54,6 +55,7 @@ const load = ($container) => {
 
     $.getJSON(jsonURL, (config) => {
         $container.append(quiz(config));
+        ticker($('h1').first());
     });
 };
 

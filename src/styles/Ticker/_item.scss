@@ -1,0 +1,47 @@
+.TickerItem {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform-origin: 50% 833%;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+.TickerItem:first-child {
+	animation-name: tickIn;
+}
+
+.TickerItem:first-child + .TickerItem {
+	animation-name: tickOut;
+}
+
+.TickerItem + .TickerItem + .TickerItem {
+	display: none;
+}
+
+.TickerItem::before {
+	content: "";
+	position: absolute;
+	top: -1em;
+	left: -1em;
+	z-index: -1;
+	border-left: 2em solid transparent;
+	border-right: 2em solid transparent;
+	border-top: 8em solid $white;
+	width: 50%;
+	height: 0;
+}
+
+.TickerItem--0::before {
+	border-top-color: $pastelYellow;
+}
+
+.TickerItem--1::before {
+	border-top-color: $lighterGrey;
+}
+
+.TickerItem--2::before {
+	border-top-color: $grey
+}

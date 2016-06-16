@@ -83,3 +83,21 @@
     transform: translate3d(50%, 0, 0) rotate3d(0, 0, 1, 5deg);
   }
 }
+
+@keyframes tickIn {
+  from {
+    transform: rotate(-36deg);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes tickOut {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotate(36deg);
+  }
+}
