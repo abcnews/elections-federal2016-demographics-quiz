@@ -1,15 +1,46 @@
 {
 	"group": "Gender",
 	"identityMappings": {
-		"Woman": ["men"],
-		"Man": ["women"],
-		"Other": ["men", "women"]
+		"Woman": [
+			"men"
+		],
+		"Man": [
+			"women"
+		],
+		"Other": [
+			"men",
+			"women"
+		]
 	},
 	"ranges": [
-		["Strongly disagree", "Somewhat disagree", "Neutral", "Somewhat agree", "Strongly agree"],
-		["Much less", "Somewhat less", "About the same as now", "Somewhat more", "Much more"],
-		["Many fewer", "Somewhat fewer", "About the same as now", "Somewhat more", "Many more"],
-		["Much lower", "Somewhat lower", "About the same as now", "Somewhat higher", "Much higher"]
+		[
+			"Strongly disagree",
+			"Somewhat disagree",
+			"Neutral",
+			"Somewhat agree",
+			"Strongly agree"
+		],
+		[
+			"Much less",
+			"Somewhat less",
+			"About the same as now",
+			"Somewhat more",
+			"Much more"
+		],
+		[
+			"Many fewer",
+			"Somewhat fewer",
+			"About the same as now",
+			"Somewhat more",
+			"Many more"
+		],
+		[
+			"Much lower",
+			"Somewhat lower",
+			"About the same as now",
+			"Somewhat higher",
+			"Much higher"
+		]
 	],
 	"questions": [
 		{
@@ -30,7 +61,7 @@
 				"men": 3.190986,
 				"women": 2.682634
 			},
-			"explanation": "This is one of only seven Vote Compass questions in which men and women have, on average, opposing views. Women are generally opposed to cutting public servies in order to get the budget more balanced. "
+			"explanation": "This is one of only seven Vote Compass questions in which men and women have, on average, opposing views. Women are generally opposed to cutting public services in a bid to balance the budget."
 		},
 		{
 			"text": "On average, where do {d} stand on this issue?",
@@ -51,7 +82,8 @@
 				"men": 3.203365,
 				"women": 3.627971
 			},
-			"explanation": "Both men and women, on average, say that Australia should admit more refugees than it currently does."
+			"explanation": "Both men and women, on average, say that Australia should admit more refugees than it currently does.",
+			"relatedStoryId": 7493064
 		},
 		{
 			"text": "On average, where do {d} stand on this issue?",
@@ -61,7 +93,7 @@
 				"men": 4.244156,
 				"women": 4.208348
 			},
-			"explanation": "This is the topic on which men and women are in furious agreement, as are the main political parties. Unfortunately, the parties are both opposed, whereas most Australians (more than 80pc) are in favour of a federal ICAC. ABC News breaks down the numbers from Vote Compass.",
+			"explanation": "This is the topic on which men and women are in furious agreement, with most Australians (more than 80 per cent) in favour of a federal ICAC. The major parties agree too – but with each other, not with the public. They are both opposed to creating a corruption watchdog.",
 			"relatedStoryId": 7474810
 		},
 		{
@@ -82,7 +114,7 @@
 				"men": 4.030645,
 				"women": 4.310707
 			},
-			"explanation": "This is one of only two questions where both genders had strong opinions. Overall, women were more enthusiastic towards more restrictions on foreign ownership of agricultural land, but men were not far behind. See more on this:",
+			"explanation": "This is one of only two questions where both genders had strong opinions. Overall, women were more enthusiastic towards more restrictions on foreign ownership of agricultural land, but men were not far behind.",
 			"relatedStoryId": 7432598
 		},
 		{
@@ -93,7 +125,7 @@
 				"men": 3.493181,
 				"women": 2.754599
 			},
-			"explanation": "The second biggest gender gap, and one of only seven questions that men and women are divided on. Men are generally in favour of boat turn-backs and offshore detention. See more on Vote Compass and asylum seeker issues:",
+			"explanation": "The second biggest gender gap, and one of only seven questions that men and women are divided on. Men are generally in favour of boat turn-backs and offshore detention.",
 			"relatedStoryId": 7493064
 		},
 		{
@@ -115,7 +147,7 @@
 				"men": 3.443847,
 				"women": 3.732927
 			},
-			"explanation": "There are 19 vote Compass questions in which the average women's answer is further away from \"neutral\" than men's, and this is one of them. Nearly two-thirds of women surveyed in Vote Compass want the minimum wage to be higher, but less than half of men share their view.",
+			"explanation": "There are 19 Vote Compass questions in which the average women's answer is further away from \"neutral\" than men's, and this is one of them. Nearly two-thirds of women surveyed in Vote Compass want the minimum wage to be higher, but less than half of men share their view.",
 			"relatedStoryId": 7445700
 		}
 	]
