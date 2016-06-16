@@ -24,6 +24,10 @@ const ticker = ($title) => {
 
 	const tickerEl = view(items);
 
+	if (tickerEl.style.animationName === undefined) {
+		return;
+	}
+
 	$title.empty().append([
 		surroundingText[0],
 		tickerEl,
