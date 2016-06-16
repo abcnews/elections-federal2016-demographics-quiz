@@ -35,13 +35,21 @@
 }
 
 .TickerItem--0::before {
-	border-top-color: $pastelYellow;
+	border-top-color: #CEDDE6;
 }
 
 .TickerItem--1::before {
-	border-top-color: $lighterGrey;
+	border-top-color: #D3E1F0;
 }
 
 .TickerItem--2::before {
-	border-top-color: $grey
+	border-top-color: #DCE0E5;
 }
+
+// .TickerItem--men::before {
+// 	border-top-color: #FFF7D6;
+// }
+
+// .TickerItem--women::before {
+// 	border-top-color: #FFEDD6;
+// }

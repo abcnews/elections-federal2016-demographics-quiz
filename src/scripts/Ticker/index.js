@@ -1,6 +1,7 @@
 const yo = require('yo-yo');
 
 const ITEMS_PATTERN = /([\w\d-\+<>]+(?:\/[\w\d-\+<>]+)+)/;
+const NON_ALPHANUMERIC_PATTERN = /[\W_]+/g;
 const TICK_PERIOD = 1500;
 
 const ticker = ($title) => {
@@ -19,7 +20,11 @@ const ticker = ($title) => {
 	const surroundingText = titleText.split(itemsText);
 
 	const items = itemsText.split('/').map((text, index) => {
-		return {text, index};
+		return {
+			text,
+			index,
+			slug: text.replace(NON_ALPHANUMERIC_PATTERN, '')
+		};
 	});
 
 	const tickerEl = view(items);
@@ -36,14 +41,16 @@ const ticker = ($title) => {
 
 	setInterval(() => {
 		items.unshift(items.pop());
-		yo.update(tickerEl, view([]));
-		yo.update(tickerEl, view(items));
+		yo.update(tickerEl, view([])); // Empty first so initial animations play later
+		yo.update(tickerEl, view(items.filter((item, index) => { return index < 2; })));
 	}, TICK_PERIOD);
 };
 
 const view = (items) => {
 	return yo`<div class="Ticker">
-		${items.map((item) => { return yo`<div class="TickerItem TickerItem--${item.index}">${item.text}</div>`; })}
+		${items.map((item) => {
+			return yo`<div class="TickerItem TickerItem--${item.index} TickerItem--${item.slug}">${item.text}</div>`;
+		})}
 	</div>`;
 };
 
