@@ -20,36 +20,3 @@
 .TickerItem + .TickerItem + .TickerItem {
 	display: none;
 }
-
-.TickerItem::before {
-	content: "";
-	position: absolute;
-	top: -1em;
-	left: -1em;
-	z-index: -1;
-	border-left: 2em solid transparent;
-	border-right: 2em solid transparent;
-	border-top: 8em solid $white;
-	width: 50%;
-	height: 0;
-}
-
-.TickerItem--0::before {
-	border-top-color: #CEDDE6;
-}
-
-.TickerItem--1::before {
-	border-top-color: #D3E1F0;
-}
-
-.TickerItem--2::before {
-	border-top-color: #DCE0E5;
-}
-
-// .TickerItem--men::before {
-// 	border-top-color: #FFF7D6;
-// }
-
-// .TickerItem--women::before {
-// 	border-top-color: #FFEDD6;
-// }

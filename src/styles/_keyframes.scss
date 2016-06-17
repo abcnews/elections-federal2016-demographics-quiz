@@ -86,18 +86,28 @@
 
 @keyframes tickIn {
   from {
+    opacity: 0;
     transform: rotate(-36deg);
   }
+  33% {
+    opacity: 0;
+  }
   to {
+    opacity: 1;
     transform: none;
   }
 }
 
 @keyframes tickOut {
   from {
+    opacity: 1;
     transform: none;
   }
+  66% {
+    opacity: 0;
+  }
   to {
+    opacity: 0;
     transform: rotate(36deg);
   }
 }
