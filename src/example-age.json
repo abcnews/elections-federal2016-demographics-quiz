@@ -1,49 +1,175 @@
 {
 	"group": "Age",
+	"correctMargin": 0.075,
 	"identityMappings": {
-		"18-34": ["55+"],
-		"35-54": ["18-34", "55+"],
-		"55+": ["18-34"]
+		"18-34": [
+			"55+"
+		],
+		"35-54": [
+			"18-34",
+			"55+"
+		],
+		"55+": [
+			"18-34"
+		]
 	},
 	"ranges": [
-		["Strongly disagree", "Somewhat disagree", "Neutral", "Somewhat agree", "Strongly agree"],
-		["Much less", "Somewhat less", "About the same as now", "Somewhat more", "Much more"],
-		["Many fewer", "Somewhat fewer", "About the same as now", "Somewhat more", "Many more"],
-		["Much lower", "Somewhat lower", "About the same as now", "Somewhat higher", "Much higher"]
+		[
+			"Strongly disagree",
+			"Somewhat disagree",
+			"Neutral",
+			"Somewhat agree",
+			"Strongly agree"
+		],
+		[
+			"Much less",
+			"Somewhat less",
+			"About the same as now",
+			"Somewhat more",
+			"Much more"
+		],
+		[
+			"Many fewer",
+			"Somewhat fewer",
+			"About the same as now",
+			"Somewhat more",
+			"Many more"
+		],
+		[
+			"Much lower",
+			"Somewhat lower",
+			"About the same as now",
+			"Somewhat higher",
+			"Much higher"
+		]
 	],
 	"questions": [
 		{
-			"text": "On average, how much do people aged {d} agree with this statement?",
-			"statement": "The government should further restrict foreign ownership of Australian agricultural land.",
+			"text": "On average, where do people aged {d} stand on this issue?",
+			"statement": "Marriage should only be between a man and a woman.",
 			"range": 0,
 			"answers": {
-				"18-34": 4.07017510301947,
-				"35-54": 4.18162791271441,
-				"55+": 4.25108256490489
+				"18-34": 2.166253,
+				"35-54": 2.515609,
+				"55+": 2.898825
 			},
-			"explanation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+			"explanation": "Social issues are the areas where older and younger people are most likely to disagree with each other. Of all 30 Vote Compass questions, this one produced the largest gap between the averages of younger and older people. All three age groups are likely to disagree with the statement, just to differing degrees."
 		},
 		{
-			"text": "On average, how much do people aged {d} agree with this statement?",
+			"text": "On average, where do people aged {d} stand on this issue?",
+			"statement": "Foreign companies should be prohibited from leasing Australian ports.",
+			"range": 0,
+			"answers": {
+				"18-34": 3.403971,
+				"35-54": 3.663385,
+				"55+": 4.083502
+			},
+			"explanation": "Port leases wouldn't be at the top of most people's lists of hot button topics, but this question did produce the second biggest gap between younger and older voters. All age groups agreed with the question, but older people were more likely to have strong opinions. "
+		},
+		{
+			"text": "On average, where do people aged {d} stand on this issue?",
+			"statement": "Boats carrying asylum seekers should be turned back.",
+			"range": 0,
+			"answers": {
+				"18-34": 2.698067,
+				"35-54": 3.192474,
+				"55+": 3.36145
+			},
+			"explanation": "Issues relating to refugees and asylum seekers bring about some of the biggest generation gaps of all the Vote Compass questions. On this question, older and younger voters are split either side of the middle line, with the younger generation disagreeing with boat turn-backs.",
+			"relatedStoryId": 7493064
+		},
+		{
+			"text": "On average, where do people aged {d} stand on this issue?",
+			"statement": "Australia should end the monarchy and become a republic.",
+			"range": 0,
+			"answers": {
+				"18-34": 2.921526,
+				"35-54": 3.119684,
+				"55+": 3.329657
+			},
+			"explanation": "One of only five questions where the older and younger generations are on opposite sides of the scale, with younger people on average disagreeing with Australia becoming a republic."
+		},
+		{
+			"text": "On average, where do people aged {d} stand on this issue?",
+			"statement": "How much of their health care costs should individuals have to pay directly?",
+			"range": 1,
+			"answers": {
+				"18-34": 2.445781,
+				"35-54": 2.641346,
+				"55+": 2.715643
+			},
+			"explanation": "You could be forgiven for thinking that older people, faced with more health issues, would be more inclined to want to pay less of their health care costs. But Vote Compass results suggest the opposite: Gen Y voters are more likely to say \"less\"."
+		},
+		{
+			"text": "On average, where do people aged {d} stand on this issue?",
+			"statement": "Terminally ill patients should be able to legally end their own lives with medical assistance.",
+			"range": 0,
+			"answers": {
+				"18-34": 3.941085,
+				"35-54": 3.942907,
+				"55+": 3.974645
+			},
+			"explanation": "This is the one question on which there is no generation gap. All age groups are, on average, in agreement that euthanasia should be legalised.",
+			"relatedStoryId": 7441176
+		},
+		{
+			"text": "On average, where do people aged {d} stand on this issue?",
+			"statement": "Australia should put a price on carbon emissions.",
+			"range": 0,
+			"answers": {
+				"18-34": 3.692505,
+				"35-54": 3.571311,
+				"55+": 3.682441
+			},
+			"explanation": "Old and young have come together on carbon pricing, according to Vote Compass results. Milennials and the older generation are in agreement with each other, with Gen Y the odd ones out. Overall, 63 per cent of Australians say they are in favour of a price on carbon, up from 50 per cent in 2013.",
+			"relatedStoryId": 7467242
+		},
+		{
+			"text": "On average, where do people aged {d} stand on this issue?",
+			"statement": "People who work on a Sunday should get paid more than people who work on a Saturday.",
+			"range": 0,
+			"answers": {
+				"18-34": 3.55813,
+				"35-54": 3.434656,
+				"55+": 3.315526
+			},
+			"explanation": "There are slight differences between the generations on this question, with Gen Y (not surprisingly) more in favour of special Sunday penalty rates.",
+			"relatedStoryId": 7449292
+		},
+		{
+			"text": "On average, where do people aged {d} stand on this issue?",
+			"statement": "How much income should former students earn before they have to start repaying their university debt?",
+			"range": 1,
+			"answers": {
+				"18-34": 3.184102,
+				"35-54": 2.95368,
+				"55+": 2.925538
+			},
+			"explanation": "Not surprisingly, there is a generation gap when it comes to student debt. On this issue, older and younger voters fall either side of the \"neutral\" line, with younger people inclined to think HECS repayments should kick in a bit later, while older Australians say education debts should be paid back sooner."
+		},
+		{
+			"text": "On average, where do people aged {d} stand on this issue?",
 			"statement": "Transgender awareness should be taught in primary schools.",
 			"range": 0,
 			"answers": {
-				"18-34": 3.151867334,
-				"35-54": 2.66063438,
-				"55+": 2.552279251
+				"18-34": 3.151867,
+				"35-54": 2.660634,
+				"55+": 2.552279
 			},
-			"explanation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+			"explanation": "This topic shows a clear divide between younger and older Australians. Not only is there a large gap between the points on the scale, but they are split either side of the agree/disagree line. No surprises about which demographic lands on which side though, with transgender issues a relatively new topic of wider public interest.",
+			"relatedStoryId": 7459978
 		},
 		{
-			"text": "On average, how do people aged {d} answer this question?",
-			"statement": "How many refugees should Australia admit?",
-			"range": 2,
+			"text": "On average, where do people aged {d} stand on this issue?",
+			"statement": "How high should the minimum wage be?",
+			"range": 3,
 			"answers": {
-				"18-34": 3.624980547,
-				"35-54": 3.339862132,
-				"55+": 3.341249478
+				"18-34": 3.605389,
+				"35-54": 3.543665,
+				"55+": 3.629606
 			},
-			"explanation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+			"explanation": "This is one of only three questions where it is almost impossible to tell the difference between the generations. In fact, there were more noticeable differences between men and women than the different age groups.",
+			"relatedStoryId": 7445700
 		}
 	]
 }
