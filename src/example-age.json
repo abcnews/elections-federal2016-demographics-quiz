@@ -1,6 +1,6 @@
 {
 	"group": "Age",
-	"correctMargin": 0.075,
+	"correctMargin": 0.1,
 	"identityMappings": {
 		"18-34": [
 			"55+"
@@ -88,7 +88,7 @@
 				"35-54": 3.571311,
 				"55+": 3.682441
 			},
-			"explanation": "Old and young have come together on carbon pricing, according to Vote Compass results. Milennials and the older generation are in agreement with each other, with Gen Xers the odd ones out. Overall, 63 per cent of Australians say they are in favour of a price on carbon, up from 50 per cent in 2013.",
+			"explanation": "Old and young have come together on carbon pricing, according to Vote Compass results. Millennials and the older generation are in agreement with each other, with Gen Xers the odd ones out. Overall, 63 per cent of Australians say they are in favour of a price on carbon, up from 50 per cent in 2013.",
 			"relatedStoryId": 7467242
 		},
 		{
@@ -111,7 +111,7 @@
 				"35-54": 2.641346,
 				"55+": 2.715643
 			},
-			"explanation": "You could be forgiven for thinking that older people, faced with more health issues, would be more inclined to want to pay less of their health care costs. But Vote Compass results suggest the opposite: Milennial voters are more likely to say \"less\"."
+			"explanation": "You could be forgiven for thinking that older people, faced with more health issues, would be more inclined to want to pay less of their health care costs. But Vote Compass results suggest the opposite: Millennial voters are more likely to say \"less\"."
 		},
 		{
 			"text": "On average, where do people aged {d} stand on this issue?",
@@ -134,7 +134,7 @@
 				"35-54": 3.434656,
 				"55+": 3.315526
 			},
-			"explanation": "There are slight differences between the generations on this question, with milennials (not surprisingly) more in favour of special Sunday penalty rates.",
+			"explanation": "There are slight differences between the generations on this question, with millennials (not surprisingly) more in favour of special Sunday penalty rates.",
 			"relatedStoryId": 7449292
 		},
 		{
