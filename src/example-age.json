@@ -57,14 +57,15 @@
 		},
 		{
 			"text": "On average, where do people aged {d} stand on this issue?",
-			"statement": "Foreign companies should be prohibited from leasing Australian ports.",
-			"range": 0,
+			"statement": "How high should the minimum wage be?",
+			"range": 3,
 			"answers": {
-				"18-34": 3.403971,
-				"35-54": 3.663385,
-				"55+": 4.083502
+				"18-34": 3.605389,
+				"35-54": 3.543665,
+				"55+": 3.629606
 			},
-			"explanation": "Port leases wouldn't be at the top of most people's lists of hot button topics, but this question did produce the second biggest gap between younger and older voters. All age groups agreed with the question, but older people were more likely to have strong opinions. "
+			"explanation": "This is one of only three questions where it is almost impossible to tell the difference between the generations. In fact, there were more noticeable differences between men and women than the different age groups.",
+			"relatedStoryId": 7445700
 		},
 		{
 			"text": "On average, where do people aged {d} stand on this issue?",
@@ -77,6 +78,18 @@
 			},
 			"explanation": "Issues relating to refugees and asylum seekers bring about some of the biggest generation gaps of all the Vote Compass questions. On this question, older and younger voters are split either side of the middle line, with the younger generation disagreeing with boat turn-backs.",
 			"relatedStoryId": 7493064
+		},
+		{
+			"text": "On average, where do people aged {d} stand on this issue?",
+			"statement": "Australia should put a price on carbon emissions.",
+			"range": 0,
+			"answers": {
+				"18-34": 3.692505,
+				"35-54": 3.571311,
+				"55+": 3.682441
+			},
+			"explanation": "Old and young have come together on carbon pricing, according to Vote Compass results. Milennials and the older generation are in agreement with each other, with Gen Xers the odd ones out. Overall, 63 per cent of Australians say they are in favour of a price on carbon, up from 50 per cent in 2013.",
+			"relatedStoryId": 7467242
 		},
 		{
 			"text": "On average, where do people aged {d} stand on this issue?",
@@ -98,7 +111,7 @@
 				"35-54": 2.641346,
 				"55+": 2.715643
 			},
-			"explanation": "You could be forgiven for thinking that older people, faced with more health issues, would be more inclined to want to pay less of their health care costs. But Vote Compass results suggest the opposite: Gen Y voters are more likely to say \"less\"."
+			"explanation": "You could be forgiven for thinking that older people, faced with more health issues, would be more inclined to want to pay less of their health care costs. But Vote Compass results suggest the opposite: Milennial voters are more likely to say \"less\"."
 		},
 		{
 			"text": "On average, where do people aged {d} stand on this issue?",
@@ -114,18 +127,6 @@
 		},
 		{
 			"text": "On average, where do people aged {d} stand on this issue?",
-			"statement": "Australia should put a price on carbon emissions.",
-			"range": 0,
-			"answers": {
-				"18-34": 3.692505,
-				"35-54": 3.571311,
-				"55+": 3.682441
-			},
-			"explanation": "Old and young have come together on carbon pricing, according to Vote Compass results. Milennials and the older generation are in agreement with each other, with Gen Y the odd ones out. Overall, 63 per cent of Australians say they are in favour of a price on carbon, up from 50 per cent in 2013.",
-			"relatedStoryId": 7467242
-		},
-		{
-			"text": "On average, where do people aged {d} stand on this issue?",
 			"statement": "People who work on a Sunday should get paid more than people who work on a Saturday.",
 			"range": 0,
 			"answers": {
@@ -133,7 +134,7 @@
 				"35-54": 3.434656,
 				"55+": 3.315526
 			},
-			"explanation": "There are slight differences between the generations on this question, with Gen Y (not surprisingly) more in favour of special Sunday penalty rates.",
+			"explanation": "There are slight differences between the generations on this question, with milennials (not surprisingly) more in favour of special Sunday penalty rates.",
 			"relatedStoryId": 7449292
 		},
 		{
@@ -158,18 +159,6 @@
 			},
 			"explanation": "This topic shows a clear divide between younger and older Australians. Not only is there a large gap between the points on the scale, but they are split either side of the agree/disagree line. No surprises about which demographic lands on which side though, with transgender issues a relatively new topic of wider public interest.",
 			"relatedStoryId": 7459978
-		},
-		{
-			"text": "On average, where do people aged {d} stand on this issue?",
-			"statement": "How high should the minimum wage be?",
-			"range": 3,
-			"answers": {
-				"18-34": 3.605389,
-				"35-54": 3.543665,
-				"55+": 3.629606
-			},
-			"explanation": "This is one of only three questions where it is almost impossible to tell the difference between the generations. In fact, there were more noticeable differences between men and women than the different age groups.",
-			"relatedStoryId": 7445700
 		}
 	]
 }
