@@ -2,17 +2,7 @@
 	display: inline-block;
 	overflow: hidden;
 	position: relative;
-	top: 0.125em;
-	border-radius: 0.125em;
-	width: 3.25em;
-	height: 1em;
+	margin-bottom: -10%;
 	line-height: inherit;
-}
-
-.story.richtext .Ticker {
-	top: 0.125em;
-}
-
-.article.section .Ticker {
-	top: 0.165em;
+	vertical-align: top;
 }
