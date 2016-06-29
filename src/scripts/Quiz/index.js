@@ -25,7 +25,7 @@ const quiz = (config) => {
                     setTimeout(send.event('create'), 750);
                     break;
                 case 'create':
-                    if (state.identity === null || state.questions !== null) {
+                    if ((state.identity === null && params.ignoreIdentity !== true) || state.questions !== null) {
                         break;
                     }
                     state.questions = questionsForIdentity(config, state.identity);
@@ -76,6 +76,10 @@ const quiz = (config) => {
     });
 
     const el = view(send.state(), send);
+
+    if (config.identityMappings == null) {
+        send('create', {ignoreIdentity: true});
+    }
 
     guessHandler(el, send);
 
@@ -189,10 +193,10 @@ const guessHandler = (el, send) => {
 };
 
 const questionsForIdentity = (config, identity) => {
-    const pool = config.identityMappings[identity];
+    const pool = identity == null ? null : config.identityMappings[identity];
 
     return config.questions.map((question, index) => {
-        const demographic = pool[index % pool.length];
+        const demographic = pool == null ? question.demographic : pool[index % pool.length];
 
         return {
             text: question.text.replace('{d}', demographic),

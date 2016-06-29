@@ -20,9 +20,10 @@ const QUESTION_POINTS_VALUE = 10;
 const VERY_CLOSE_MARGIN = 0.75;
 
 const view = (state, send) => {
+
     if (state.questions === null) {
         return yo`<div class="Quiz">
-            ${identityView(state, send)}
+            ${state.config.identityMappings == null ? null : identityView(state, send)}
         </div>`;
     }
 

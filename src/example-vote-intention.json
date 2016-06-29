@@ -1,0 +1,158 @@
+{
+	"group": "Vote intention",
+	"ranges": [
+		[
+			"Strongly disagree",
+			"Somewhat disagree",
+			"Neutral",
+			"Somewhat agree",
+			"Strongly agree"
+		],
+		[
+			"Much less",
+			"Somewhat less",
+			"About the same as now",
+			"Somewhat more",
+			"Much more"
+		],
+		[
+			"Many fewer",
+			"Somewhat fewer",
+			"About the same as now",
+			"Somewhat more",
+			"Many more"
+		],
+		[
+			"Much lower",
+			"Somewhat lower",
+			"About the same as now",
+			"Somewhat higher",
+			"Much higher"
+		]
+	],
+	"questions": [
+		{
+			"demographic": "L/NP",
+			"text": "On average, where do {d} voters stand on this issue?",
+			"statement": "The National Broadband Network should deliver faster speeds even if it costs the government more.",
+			"range": 0,
+			"answers": {
+				"L/NP": 3.409210017,
+				"ALP": 4.329147724,
+				"GRN": 4.266295571
+			},
+			"explanation": "Malcolm Turnbull's party has long campaigned for a cheaper NBN, but their supporters do not appear to share their enthusiasm for saving money when it comes to fast internet. All groups agree that cost is not the most important factor in building the NBN."
+		},
+		{
+			"demographic": "GRN",
+			"text": "On average, where do {d} voters stand on this issue?",
+			"statement": "The federal budget deficit should be reduced, even if it means fewer public services.",
+			"range": 0,
+			"answers": {
+				"L/NP": 3.670969941,
+				"ALP": 2.316226793,
+				"GRN": 2.230675536
+			},
+			"explanation": "Perhaps the split between left and right is not suprising here, but the extent to which GRN and ALP voters are in agreement might be unexpected."
+		},
+		{
+			"demographic": "ALP",
+			"text": "On average, where do {d} voters stand on this issue?",
+			"statement": "Boats carrying asylum seekers should be turned back.",
+			"range": 0,
+			"answers": {
+				"L/NP": 4.091368946,
+				"ALP": 2.692147273,
+				"GRN": 1.875569131
+			},
+			"explanation": "The issue of asylum seekers continues to be among the most divisive in Australia. This question saw the largest gap between the groups, closely followed by the Vote Compass question on offshore detention.",
+			"relatedStoryId": 7493064
+		},
+		{
+			"demographic": "GRN",
+			"text": "On average, where do {d} voters stand on this issue?",
+			"statement": "The government should be able to revoke Australian citizenship from suspected terrorists abroad.",
+			"range": 0,
+			"answers": {
+				"L/NP": 4.548992498,
+				"ALP": 3.947177002,
+				"GRN": 3.381870275
+			},
+			"explanation": "All groups, on average, agree with revoking the citizenship of Australians who are suspected to have taken part in terrorist activity abroad."
+		},
+		{
+			"demographic": "L/NP",
+			"text": "On average, where do {d} voters stand on this issue?",
+			"statement": "Australia should end the monarchy and become a republic.",
+			"range": 0,
+			"answers": {
+				"L/NP": 2.516048102,
+				"ALP": 3.46646913,
+				"GRN": 3.501022413
+			},
+			"explanation": "This is one of 17 questions on which L/NP voters are on one side, with ALP and GRN voters on the other side of the middle line. Given Malcolm Turnbull's longstanding public support for Australia becoming a republic, it's also one issue on which he is out of step with the conservative base of his party."
+		},
+		{
+			"demographic": "ALP",
+			"text": "On average, where do {d} voters stand on this issue?",
+			"statement": "Marriage should only be between a man and a woman.",
+			"range": 0,
+			"answers": {
+				"L/NP": 3.14737041,
+				"ALP": 2.083017592,
+				"GRN": 1.479172798
+			},
+			"explanation": "Another question that splits left and right voters, with L/NP supporters the only group to disagree with same-sex marriage.",
+			"relatedStoryId": 7520478
+		},
+		{
+			"demographic": "GRN",
+			"text": "On average, where do {d} voters stand on this issue?",
+			"statement": "The government should further restrict foreign ownership of Australian agricultural land.",
+			"range": 0,
+			"answers": {
+				"L/NP": 4.246970424,
+				"ALP": 4.292934343,
+				"GRN": 4.219554931
+			},
+			"explanation": "This is the question on which there is the most agreement between all groups on the political spectrum. Everyone is in favour, with ALP voters slightly more enthusiastic than the other groups."
+		},
+		{
+			"demographic": "L/NP",
+			"text": "On average, where do {d} voters stand on this issue?",
+			"statement": "Anti-terrorism laws in Australia have gone too far.",
+			"range": 0,
+			"answers": {
+				"L/NP": 1.825157569,
+				"ALP": 2.764022346,
+				"GRN": 3.296427327
+			},
+			"explanation": "This is the only question on which GRN voters are on the opposite side to ALP and L/NP voters."
+		},
+		{
+			"demographic": "GRN",
+			"text": "On average, where do {d} voters stand on this issue?",
+			"statement": "The government should reinstate the construction industry watchdog, the ABCC.",
+			"range": 0,
+			"answers": {
+				"L/NP": 4.145099845,
+				"ALP": 2.980255324,
+				"GRN": 3.31508686
+			},
+			"explanation": "This is a rare topic: one that unites GRN and L/NP voters on one side, with ALP voters on the other side (and it's a topic that has sparked a double dissolution election, which also makes it rare). ALP voters are slightly inclined to disagree with the statement, but GRN voters are in favour."
+		},
+		{
+			"demographic": "ALP",
+			"text": "On average, where do {d} voters stand on this issue?",
+			"statement": "Transgender awareness should be taught in primary schools.",
+			"range": 0,
+			"answers": {
+				"L/NP": 2.198244772,
+				"ALP": 3.239280819,
+				"GRN": 3.857419499
+			},
+			"explanation": "The Turnbull government's crackdown on the 'Safe Schools' program appears to align with their supporters' views on the topic, while GRN voters are generally supportive of transgender awareness in schools. ALP voters land in the middle of those two sides, but towards the \"agree\" end of the scale.",
+			"relatedStoryId": 7459978
+		}
+	]
+}
