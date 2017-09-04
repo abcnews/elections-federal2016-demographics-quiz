@@ -1,6 +1,6 @@
 {
   "name": "elections-federal2016-demographics-quiz",
-  "version": "1.19.1",
+  "version": "2.0.0",
   "description": "Quizzing the audience on where demographics are positioned in Vote Compass results.",
   "private": true,
   "contributors": [
