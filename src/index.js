@@ -5,10 +5,11 @@
  * @author Colin Gourlay <gourlay.colin@abc.net.au>
  */
 
-const fastclick = require('fastclick');
 const throttle = require('throttleit');
 const quiz = require('./Quiz');
 const ticker = require('./Ticker');
+
+require('./index.scss');
 
 const DATA_ATTRIBUTE = 'elections-federal2016-demographics-quiz';
 const DATA_ATTRIBUTE_SELECTOR = '[data-' + DATA_ATTRIBUTE + ']';
@@ -69,6 +70,4 @@ $(() => {
     $$containers.each((index, el) => {
         load($(el));
     });
-
-    fastclick(document.body);
 });

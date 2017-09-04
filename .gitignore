@@ -1,6 +1,4 @@
 .DS_Store
-.sass-cache
 build
-design
 node_modules
 npm-debug.log
